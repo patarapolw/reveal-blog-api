@@ -16,6 +16,7 @@ export interface IMongoUpdate {
 }
 
 export interface IHeader {
+  source?: string
   md5?: string
   tag?: string[]
 }
@@ -38,5 +39,5 @@ export interface IApi {
 }
 
 export type TypedRouter<Api extends IApi, Path extends keyof Api, Method extends keyof Api[Path], T = boolean>
-  = (req: Api[Path][Method] & IApiRequest)
+  = (req: Omit<Api[Path][Method], 'response'>)
     => Api[Path][Method] extends { response: any } ? Promise<Api[Path][Method]['response']> : Promise<T>

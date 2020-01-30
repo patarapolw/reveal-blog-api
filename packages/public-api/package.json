@@ -1,0 +1,19 @@
+{
+  "name": "@blog-reveal/public-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "now dev",
+    "predeploy": "node ./predeploy.js",
+    "deploy": "now"
+  },
+  "dependencies": {
+    "@blog-reveal/core": "*"
+  },
+  "devDependencies": {
+    "@now/node": "^1.3.5",
+    "dotenv": "^8.2.0"
+  }
+}

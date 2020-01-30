@@ -53,6 +53,7 @@ export class Posts implements IPostsFull {
   }) date?: Date | string
 
   @prop({ required: true, index: true }) title!: string
+  @prop({ index: true }) source?: string
   @prop({ default: [] }) tag?: string[]
   @prop({ default: {} }) header?: Record<string, any>
   @prop({ required: true }) excerpt?: string
@@ -112,6 +113,7 @@ export class Slides implements ISlidesFull {
   }) date?: Date | string
 
   @prop({ index: true }) title?: string
+  @prop({ index: true }) source?: string
   @prop({ default: [] }) tag?: string[]
   @prop({ unique: true, required: true }) md5?: string
 
@@ -170,6 +172,8 @@ export class Media implements IMediaFull {
   @prop({ index: true }) type?: string
   @prop({ required: true }) url!: string
   @prop({ required: true }) md5!: string
+  @prop({ index: true }) source?: string
+  @prop({ default: [] }) tag?: string[]
 }
 
 export const MediaModel = getModelForClass(Media, { schemaOptions: { timestamps: true } })
