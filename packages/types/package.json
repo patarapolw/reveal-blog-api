@@ -1,0 +1,16 @@
+{
+  "name": "@blog-reveal/types",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "tsc"
+  }
+}

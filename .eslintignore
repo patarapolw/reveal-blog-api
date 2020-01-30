@@ -1,0 +1,10 @@
+!**/.eslintrc*
+node_modules
+dist
+umd
+*.svg
+*.ico
+*.json
+*.md
+*.log
+*.lock
